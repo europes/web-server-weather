@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find coordinates. Try another search.', undefined)
         } else {
             callback( undefined, {
-                Forecast:  body.current.weather_descriptions[0] +'.' + ' It is currently ' + body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain.'             
+                Forecast:  body.current.weather_descriptions[0] +'.' + ' It is currently ' + body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain.' + body.current.humidity + 'humidity.'             
             })
         }} )
     }
